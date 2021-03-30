@@ -1,0 +1,7 @@
+Kafka-connect can be accessed via port 8083 within your cluster:
+
+Steps to connect with  kafka connect:
+
+1. port forward to the kafkaconnect-service Service on port 8083:
+
+    kubectl port-forward svc/{{ template "kafka-connect.fullname" . }} {{ .Values.service.port }}
