@@ -5,8 +5,14 @@ variable "create_cluster" {
   description = "Assign true if you want to create a cluster"
   default     = false
 }
+variable "cluster_name" {
+  description = "Name of IBM Kubernetes cluster"
+}
 
 #### Event streams variables ####
+variable "event_stream_name" {
+  description = "Name of source Event Stream instance to connect to"
+}
 variable "event_stream_region" {
   description = "Region of the source Event Stream instance (us-south, eu-de, etc.)"
   default = "us-south"
@@ -15,16 +21,11 @@ variable "event_stream_resource_group" {
   description = "Resource group name of the source Event Stream instance"
   default = "Default"
 }
-variable "cluster_name" {
-  description = "Name of source Event Stream instance to connect to"
-}
 variable "event_stream_topic" {
-  description = "Name of the event stream instance topic"
+  description = "Name of source Event Stream topic"
 }
 
-variable "event_stream_name" {
-  description = "Name of the event stream instance topic"
-}
+
 #### Splunk variables ####
 variable "splunk_index" {
   description = "A repository for Splunk data"
