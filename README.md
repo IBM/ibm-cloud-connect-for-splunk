@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can use `Event Stream connector for Splunk` reads the logs / events from a IBM Event Streams topic and writes to a [Splunk](https://www.splunk.com/en_us/download/splunk-enterprise.html) instance.  This repo assumes that you are using the [Export to Event Streams](https://github.ibm.com/cloud-partners/logdna-streaming) capability to stream the logs from IBM Cloud Logging or Activity Tracker service.
+You can use `Event Stream connector for Splunk` reads the logs / events from a IBM Event Streams topic and writes to a [Splunk](https://www.splunk.com/en_us/download/splunk-enterprise.html) instance.  This repo assumes that you are using the [Export to Event Streams](https://github.com/IBM/export-to-eventstreams) capability to stream the logs from IBM Cloud Logging or Activity Tracker service.
 
 It uses [Kafka Connect](https://docs.confluent.io/3.0.1/connect/intro.html), [Splunk Connect for Kafka](https://github.com/splunk/kafka-connect-splunk) deployed on a [IBM Kubernetes cluster](https://cloud.ibm.com/kubernetes/clusters).
 
@@ -19,7 +19,7 @@ This repo automates the deployment of the _Event Stream connector for Splunk_ ca
 ## Prerequisites:
 1. You must have an IBM Event Streams (Enterprise plan), as a log source
    * The name of the Event Streams instance is your `event_stream_name`.
-   * Configure the [Export to Event Streams](https://github.ibm.com/cloud-partners/logdna-streaming) capability to publish the logs from IBM Cloud Logging to a Event Stream topic `event_stream_topic`;
+   * Configure the [Export to Event Streams](https://github.com/IBM/export-to-eventstreams) capability to publish the logs from IBM Cloud Logging to a Event Stream topic `event_stream_topic`;
 1. You must have a Splunk Enterprise server instance already provisioned; and you know the following details about the log sink
    * `splunk_index`, `splunk_hec_uri` & `splunk_hec_token` to write the logs
 
